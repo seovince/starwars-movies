@@ -1,14 +1,40 @@
 # StarwarsMovies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+A test project about starwars movies repository that contains all of the episodes and some detail on each of it. This project using Angular 6 which is generated from the official site with little improvement in modules folder structuring. The data is pulled from SWAPI (Star Wars API).
 
-## Development server
+## Get Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+###Clone the repository
 
-## Code scaffolding
+```
+cd goToYourDirectory
+git clone https://github.com/seovince/starwars-movies.git
+cd starwars-movies
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+###Prerequisites
+
+There are some requirements you need to have :
+* [Install node.js](https://nodejs.org/en/) (the recommended version)
+Node.js is needed to be installed in your computer to run the [npm](https://www.npmjs.com/) command. Npm is required to install the packages inside the project.
+
+* [Angular CLI](https://github.com/angular/angular-cli/wiki)
+Angular CLI is used to make the template of this project and to run it.
+
+###Install npm packages
+
+Make sure that the npm packages contained in the package.json is installed by running :
+```
+npm install
+```
+
+###Run the project
+
+After make sure the project is cloned fully and the packages are all installed, run this command in `starwars-movies` directory :
+```
+ng serve
+```
+Open `localhost-4200` in your browser to see the application.
 
 ## Build
 
@@ -21,7 +47,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -18,10 +18,20 @@
 
 <div *ngIf="dataLoaded" class="film-detail-wrapper">
   <div class="" style="background-color: #fff; color: #000; padding-top: 20px">
-    <button type="button" routerLink="/dashboard">Back</button>
+    <a href="" class="back-button" routerLink="/dashboard">	&larr; Back to Dashboard</a>
+
     <h1 style="text-align: center">{{ data.title }}</h1>
     <hr style="border: 0; border-top: 2px solid #9c9322; margin: 0 10vw">
     <p class="film-desc">{{ data.opening_crawl }}</p>
+
+    <button class="accordion">Detail</button>
+    <div class="panel">
+      <ul>
+        <li>Director : {{ data.director }}</li>
+        <li>Producer : {{ data.producer }}</li>
+        <li>Release Date : {{ data.release_date | date }}</li>
+      </ul>
+    </div>
     <button class="accordion">Characters</button>
     <div class="panel">
       <div *ngFor="let chr of filterBy(characters); let last = last">
@@ -37,9 +47,9 @@
                          style="margin-left: 10px; margin-bottom: -5px; cursor: pointer"
                          title="Open in Google">
                 <br>
-                Gender : <i>{{ chr.gender }}</i> <br>
-                Height : <i>{{ chr.height }}</i> <br>
-                Mass : <i>{{ chr.mass }}</i>
+                Gender : {{ chr.gender }} <br>
+                Height : {{ chr.height }} <br>
+                Mass : {{ chr.mass }}
                 <br>
               </li>
             </ul>
@@ -56,9 +66,9 @@
             <ul>
               <li>
                 <strong>{{ spc.name }}</strong> <br>
-                Classification : <i>{{ spc.classification }}</i> <br>
-                Average Height : <i>{{ spc.average_height }}</i> <br>
-                Language : <i>{{ spc.language }}</i>
+                Classification : {{ spc.classification }} <br>
+                Average Height : {{ spc.average_height }} <br>
+                Language : {{ spc.language }}
                 <br>
               </li>
             </ul>
@@ -99,9 +109,9 @@
             <ul>
               <li>
                 <strong>{{ pln.name }}</strong> <br>
-                Diameter : <i>{{ pln.diameter }}</i> <br>
-                Population : <i>{{ pln.population }}</i> <br>
-                Terrain : <i>{{ pln.terrain }}</i>
+                Diameter : {{ pln.diameter }} <br>
+                Population : {{ pln.population }} <br>
+                Terrain : {{ pln.terrain }}
                 <br>
               </li>
             </ul>

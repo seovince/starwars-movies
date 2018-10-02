@@ -144,6 +144,21 @@ p {
 .google-button > img {
   height: 13px;
 }
+
+.back-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  color: #555555;
+  transition: 0.5s;
+}
+
+.back-button:hover {
+  background-color: #8a8b8b;
+  transition: 0.5s;
+}
+
+/* Animation */
 @keyframes slideUp {
   from {
     opacity: 0;

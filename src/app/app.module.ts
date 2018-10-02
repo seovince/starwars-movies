@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-// import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { FilmComponent } from './modules/film/film.component';
 
@@ -16,27 +16,12 @@ import { FilmComponent } from './modules/film/film.component';
     FilmComponent
   ],
   imports: [
+    RouterModule,
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    HttpModule,
+    HttpModule
 
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full' },
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
-        data: { page: 'dashboard' }
-      },
-      {
-        path: 'film/:id',
-        component: FilmComponent,
-        data: { page: 'film' }
-      },
-
-    ])
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]
