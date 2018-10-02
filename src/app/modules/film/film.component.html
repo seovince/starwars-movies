@@ -17,14 +17,14 @@
 </div>
 
 <div *ngIf="dataLoaded" class="film-detail-wrapper">
-  <div class="" style="background-color: #fff; color: #000; padding-top: 20px">
+  <div class="film-wrapper" style="">
     <a href="" class="back-button" routerLink="/dashboard">	&larr; Back to Dashboard</a>
 
     <h1 style="text-align: center">{{ data.title }}</h1>
-    <hr style="border: 0; border-top: 2px solid #9c9322; margin: 0 10vw">
+    <hr class="hr-gold">
     <p class="film-desc">{{ data.opening_crawl }}</p>
 
-    <button class="accordion">Detail</button>
+    <button class="accordion">Information</button>
     <div class="panel">
       <ul>
         <li>Director : {{ data.director }}</li>
@@ -44,9 +44,10 @@
                          (click)="openGoogle(chr.name)"
                          height="20px"
                          width="20px"
-                         style="margin-left: 10px; margin-bottom: -5px; cursor: pointer"
+                         class="icon-search"
                          title="Open in Google">
-                <br>
+                <br><br>
+                Year of Birth : {{ chr.birth_year }} <br>
                 Gender : {{ chr.gender }} <br>
                 Height : {{ chr.height }} <br>
                 Mass : {{ chr.mass }}
@@ -65,10 +66,13 @@
           <div class="" style="padding: 0 20px;">
             <ul>
               <li>
-                <strong>{{ spc.name }}</strong> <br>
+                <strong>{{ spc.name }}</strong>
+                <br><br>
                 Classification : {{ spc.classification }} <br>
+                Designation : {{ spc.designation }} <br>
                 Average Height : {{ spc.average_height }} <br>
-                Language : {{ spc.language }}
+                Language : {{ spc.language }} <br>
+                Average Lifespan : {{ spc.average_lifespan }}
                 <br>
               </li>
             </ul>
@@ -89,10 +93,12 @@
                      (click)="openGoogle(str.name)"
                      height="20px"
                      width="20px"
-                     style="margin-left: 10px; margin-bottom: -5px; cursor: pointer"
+                     class="icon-search"
                      title="Open in Google">
                 <br><br>
                 Model : {{ str.model }} <br>
+                Class : {{ str.starship_class }} <br>
+                Manufacturer : {{ str.manufacturer }} <br>
                 Crew : {{ str.crew }} <br>
                 Passenger : {{ str.passengers }}
             </ul>
@@ -108,10 +114,13 @@
           <div class="" style="padding: 0 20px;">
             <ul>
               <li>
-                <strong>{{ pln.name }}</strong> <br>
+                <strong>{{ pln.name }}</strong>
+                <br><br>
                 Diameter : {{ pln.diameter }} <br>
                 Population : {{ pln.population }} <br>
-                Terrain : {{ pln.terrain }}
+                Terrain : {{ pln.terrain }} <br>
+                Rotation Period : {{ pln.rotation_period }} <br>
+                Gravity : {{ pln.gravity }}
                 <br>
               </li>
             </ul>

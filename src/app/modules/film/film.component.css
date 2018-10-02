@@ -23,33 +23,11 @@ p {
     padding: 0;
   }
 }
-.film-box {
-  transition: 0.5s;
-  background: linear-gradient(to left, #252525, #474747, #252525);
-  margin: 10px 20%;
-  cursor: pointer;
-}
 
-.film-creator {
-  text-align: center;
-}
-
-.episode-box {
-  background-color: #121212;
-  text-align: center;
-	padding: 5px;
-	width: 150px;
-  border-right: 1px solid #9c9322;
-  border-bottom: 1px solid #9c9322;
-}
-
-.episode-title {
-  font-size: 2vh;
-  color: #fff;
-}
-
-.film-title {
-  font-size: 4vh;
+.film-wrapper {
+  background-color: #fff;
+  color: #000;
+  padding-top: 20px;
 }
 
 .film-desc {
@@ -88,10 +66,6 @@ p {
   display: inline-block;
   width: 100%;
 }
-.masonry{
-  column-count: 2;
-  column-gap: 10px;
-}
 
 .accordion {
     background-color: #eee;
@@ -123,6 +97,12 @@ p {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     border-bottom: 1px solid #bbbbbb;
+}
+
+.icon-search {
+  margin-left: 10px;
+  margin-bottom: -5px;
+  cursor: pointer;
 }
 
 .google-button {

@@ -63,6 +63,11 @@ body {
         animation-delay: 0.2s;
       }
 
+.hr-gold {
+  border: 0;
+  border-top: 2px solid #9c9322;
+  margin: 0 10vw;
+}
 
 /* ANIMATION */
 @-webkit-keyframes sk-cubeGridScaleDelay {
