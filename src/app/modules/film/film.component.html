@@ -1,0 +1,114 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div *ngIf="!dataLoaded" style="text-align: center">
+  <div class="sk-cube-grid">
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+  </div>
+  Loading Data...
+</div>
+
+<div *ngIf="dataLoaded" class="film-detail-wrapper">
+  <div class="" style="background-color: #fff; color: #000; padding-top: 20px">
+    <button type="button" routerLink="/dashboard">Back</button>
+    <h1 style="text-align: center">{{ data.title }}</h1>
+    <hr style="border: 0; border-top: 2px solid #9c9322; margin: 0 10vw">
+    <p class="film-desc">{{ data.opening_crawl }}</p>
+    <button class="accordion">Characters</button>
+    <div class="panel">
+      <div *ngFor="let chr of filterBy(characters); let last = last">
+        <div class="" style="padding: 5px 0">
+          <div class="" style="padding: 0 20px;">
+            <ul>
+              <li>
+                <strong>{{ chr.name }}</strong>
+                <img src="https://png.icons8.com/material/50/37AAF7/open-in-window.png"
+                         (click)="openGoogle(chr.name)"
+                         height="20px"
+                         width="20px"
+                         style="margin-left: 10px; margin-bottom: -5px; cursor: pointer"
+                         title="Open in Google">
+                <br>
+                Gender : <i>{{ chr.gender }}</i> <br>
+                Height : <i>{{ chr.height }}</i> <br>
+                Mass : <i>{{ chr.mass }}</i>
+                <br>
+              </li>
+            </ul>
+            <hr *ngIf="!last">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="accordion">Species</button>
+    <div class="panel">
+      <div *ngFor="let spc of filterBy(species); let last = last">
+        <div class="" style="padding: 5px 0">
+          <div class="" style="padding: 0 20px;">
+            <ul>
+              <li>
+                <strong>{{ spc.name }}</strong> <br>
+                Classification : <i>{{ spc.classification }}</i> <br>
+                Average Height : <i>{{ spc.average_height }}</i> <br>
+                Language : <i>{{ spc.language }}</i>
+                <br>
+              </li>
+            </ul>
+            <hr *ngIf="!last">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="accordion">Starships</button>
+    <div class="panel">
+      <div *ngFor="let str of filterBy(starships); let last = last">
+        <div class="" style="padding: 5px 0">
+          <div class="" style="padding: 0 20px;">
+            <ul>
+              <li>
+                <strong>{{ str.name }}</strong>
+                <img src="https://png.icons8.com/material/50/37AAF7/open-in-window.png"
+                     (click)="openGoogle(str.name)"
+                     height="20px"
+                     width="20px"
+                     style="margin-left: 10px; margin-bottom: -5px; cursor: pointer"
+                     title="Open in Google">
+                <br><br>
+                Model : {{ str.model }} <br>
+                Crew : {{ str.crew }} <br>
+                Passenger : {{ str.passengers }}
+            </ul>
+            <hr *ngIf="!last">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="accordion">Planets</button>
+    <div class="panel">
+      <div *ngFor="let pln of filterBy(planets); let last = last">
+        <div class="" style="padding: 5px 0">
+          <div class="" style="padding: 0 20px;">
+            <ul>
+              <li>
+                <strong>{{ pln.name }}</strong> <br>
+                Diameter : <i>{{ pln.diameter }}</i> <br>
+                Population : <i>{{ pln.population }}</i> <br>
+                Terrain : <i>{{ pln.terrain }}</i>
+                <br>
+              </li>
+            </ul>
+            <hr *ngIf="!last">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

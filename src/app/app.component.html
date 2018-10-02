@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div *ngFor="let film of data.results">
+  {{ film.title }}
+</div> -->
+<div style="text-align: center">
+  <img src="https://ubisafe.org/images/transparent-logo-star-wars-1.png" style="height: 20vh; width: auto" alt="Star Wars">
+
+  <h1>The Repository of all Star Wars movies</h1>
+</div>
+
+<div class="main" [@animRoutes]="getPage(appOutlet)">
+  <router-outlet #appOutlet="outlet"></router-outlet>
+</div>
