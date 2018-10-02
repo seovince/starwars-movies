@@ -2,9 +2,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-p {
-  /* color: #cfc9c9; */
-}
 @media only screen and (max-width: 1024px) {
   .parallelogram {
     -webkit-box-sizing: border-box;
@@ -90,10 +87,6 @@ p {
   }
 }
 
-.bg-film-cover {
-  background-size: cover;
-}
-
 .film-box {
   transition: 0.5s;
   background: linear-gradient(to left, #252525, #474747, #252525);
@@ -126,10 +119,4 @@ p {
 .film-desc {
   padding: 15px 30px;
   text-align: justify;
-}
-
-/* ANIMATION */
-@keyframes showUp {
-  0% { height: 0 },
-  100% { height: 100% }
 }

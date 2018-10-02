@@ -20,9 +20,7 @@ export class FilmComponent {
   starships: any = [];
   planets: any = [];
   characters: any = [];
-  dataLength: any = [];
   dataLoaded: boolean = false;
-  filmContent: boolean = false;
   flagAccordion: boolean = false;
 
   constructor(private http: Http, private route: ActivatedRoute) {
@@ -61,7 +59,6 @@ export class FilmComponent {
   }
 
   getSpecies(length: number) {
-    // console.log(this.data.species[1]);
     for(let i = 0; i < length; i++) {
         this.getData(this.data.species[i]).subscribe(speciesApi => {
           this.species.push(speciesApi);
@@ -74,7 +71,6 @@ export class FilmComponent {
     for(let i = 0; i < length; i++) {
         this.getData(this.data.starships[i]).subscribe(starshipsApi => {
           this.starships.push(starshipsApi);
-          // console.log(this.species);
         })
     }
   }
@@ -83,7 +79,6 @@ export class FilmComponent {
     for(let i = 0; i < length; i++) {
         this.getData(this.data.planets[i]).subscribe(planetsApi => {
           this.planets.push(planetsApi);
-          // console.log(this.species);
         })
     }
   }
@@ -92,7 +87,6 @@ export class FilmComponent {
     for(let i = 0; i < length; i++) {
         this.getData(this.data.characters[i]).subscribe(charactersApi => {
           this.characters.push(charactersApi);
-          // console.log(this.species);
         })
     }
   }

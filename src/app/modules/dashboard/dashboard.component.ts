@@ -34,7 +34,6 @@ export class DashboardComponent {
 
   constructor(private http: Http) {
     this.getContent();
-    this.getData();
   }
 
   getData() {
