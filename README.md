@@ -1,6 +1,7 @@
 # StarwarsMovies
 
-A test project about starwars movies repository that contains all of the episodes and some detail on each of it. This project using Angular 6 which is generated from the official site with little improvement in modules folder structuring. The data is pulled from SWAPI (Star Wars API).
+A test project about starwars movies repository that contains all of the episodes and some detail on each of it. This project using Angular 6 which is generated from the official site with little improvement in modules folder structuring. The data is pulled from [SWAPI (Star Wars API)](https://swapi.co/). 
+The data pulled from SWAPI is retrieved with the help of rxjs's `pipe` and `map` so the app could subscribe it and store in a variable. 
 
 ## Get Started
 
@@ -40,10 +41,6 @@ Or if you want to immediately open the app in the browser, run this instead :
 ```
 ng serve --open
 ```
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
