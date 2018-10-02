@@ -1,6 +1,7 @@
 # StarwarsMovies
 
-A test project about starwars movies repository that contains all of the episodes and some detail on each of it. This project using Angular 6 which is generated from the official site with little improvement in modules folder structuring. The data is pulled from SWAPI (Star Wars API).
+A test project about starwars movies repository that contains all of the episodes and some detail on each of it. This project using Angular 6 which is generated from the official site with little improvement in modules folder structuring. The data is pulled from [SWAPI (Star Wars API)](https://swapi.co/). 
+The data pulled from SWAPI is retrieved with the help of rxjs's `pipe` and `map` so the app could subscribe it and store in a variable. 
 
 ## Get Started
 
