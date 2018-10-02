@@ -4,7 +4,7 @@ A test project about starwars movies repository that contains all of the episode
 
 ## Get Started
 
-###Clone the repository
+### Clone the repository
 
 ```
 cd goToYourDirectory
@@ -12,7 +12,7 @@ git clone https://github.com/seovince/starwars-movies.git
 cd starwars-movies
 ```
 
-###Prerequisites
+### Prerequisites
 
 There are some requirements you need to have :
 * [Install node.js](https://nodejs.org/en/) (the recommended version)
@@ -21,14 +21,14 @@ Node.js is needed to be installed in your computer to run the [npm](https://www.
 * [Angular CLI](https://github.com/angular/angular-cli/wiki)
 Angular CLI is used to make the template of this project and to run it.
 
-###Install npm packages
+### Install npm packages
 
 Make sure that the npm packages contained in the package.json is installed by running :
 ```
 npm install
 ```
 
-###Run the project
+### Run the project
 
 After make sure the project is cloned fully and the packages are all installed, run this command in `starwars-movies` directory :
 ```
